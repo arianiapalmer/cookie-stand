@@ -37,7 +37,7 @@ function renderSales(){
     // tableRow.appendChild(hoursHead);
   }
   let totalsTd = document.createElement('th');
-  totalsTd.textContent = "Daily Location Total";
+  totalsTd.textContent = "Daily Total";
   hoursHead.appendChild(totalsTd)
   resultsTable.appendChild(hoursHead);
   for (let i = 0; i < allStores.length; i++){
