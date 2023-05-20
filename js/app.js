@@ -24,23 +24,21 @@ Store.prototype.cookiesPerHour = function () {
     this.totalSales +=cookiesSold;
   }
 };
-
 function renderSales(){
   let resultsTable = document.getElementById('results');
-  let hoursHead = document.createElement('tr');
-  let hoursTH = document.createElement('th');
-  hoursTH.textContent = 'Hours'
-  hoursHead.appendChild(hoursTH);
+  let hourHeadingRow = document.createElement('tr');
+  let hoursString = document.createElement('th');
+  hoursString.textContent = 'Hours';
+  hourHeadingRow.appendChild(hoursString);
   for(let i = 0; i < hours.length; i++){
-    let hourData = document.createElement('th');
-    hourData.textContent = hours[i];
-    hoursHead.appendChild(hourData);
-    // tableRow.appendChild(hoursHead);
+    let hourStringHeading = document.createElement('th');
+    hourStringHeading.textContent = hours[i];
+    hourHeadingRow.appendChild(hourStringHeading);
   }
-  let totalsTd = document.createElement('th');
-  totalsTd.textContent = "Daily Total";
-  hoursHead.appendChild(totalsTd)
-  resultsTable.appendChild(hoursHead);
+  let dailyTotalHeading = document.createElement('th');
+  dailyTotalHeading.textContent = "Daily Total";
+  hourHeadingRow.appendChild(dailyTotalHeading)
+  resultsTable.appendChild(hourHeadingRow);
   for (let i = 0; i < allStores.length; i++){
     let storeRow = document.createElement('tr');
     let storeNameTd = document.createElement('td');
@@ -54,7 +52,7 @@ function renderSales(){
     let storesTotalCell = document.createElement('td');
     storesTotalCell.textContent = allStores[i].totalSales;
     storeRow.appendChild(storesTotalCell);
-    resultsTable.appendChild(storeRow);
+    resultsTable.appendChild(storeRow)
   }
 };
 new Store('Seattle', 23, 65, 6.3);
