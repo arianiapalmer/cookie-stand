@@ -28,6 +28,12 @@ Store.prototype.cookiesPerHour = function () {
 // function getHourlyTotal(){
 //   allStorePerHourTotal.push(allStores.totalSales);
 // }
+
+
+
+// i need a function for the table heading
+// i need a funtion for rending a single store row
+// i need a function for rendering the heading
 function renderSales(){
   let resultsTable = document.getElementById('results');
   let hourHeadingRow = document.createElement('tr');
@@ -59,12 +65,6 @@ function renderSales(){
     resultsTable.appendChild(storeRow)
   }
 }
-new Store('Seattle', 23, 65, 6.3);
-new Store('Tokyo', 3, 24, 1.2);
-new Store('Dubai', 11, 38, 3.7);
-new Store('Paris', 20, 38, 3.7);
-new Store('Lima', 2, 16, 4.6);
-renderSales();
 function handleFormSubmit(event){
   event.preventDefault();
   let name = event.target.storeName.value;
@@ -76,4 +76,9 @@ function handleFormSubmit(event){
 }
 storeForm.addEventListener('submit', handleFormSubmit);
 
-
+new Store('Seattle', 23, 65, 6.3);
+new Store('Tokyo', 3, 24, 1.2);
+new Store('Dubai', 11, 38, 3.7);
+new Store('Paris', 20, 38, 3.7);
+new Store('Lima', 2, 16, 4.6);
+renderSales();
