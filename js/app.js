@@ -24,6 +24,7 @@ Store.prototype.cookiesPerHour = function () {
     this.totalSales +=cookiesSold;
   }
 };
+
 function renderSales(){
   let resultsTable = document.getElementById('results');
   let hoursHead = document.createElement('tr');
