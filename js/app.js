@@ -54,7 +54,7 @@ function renderSales(){
     let storesTotalCell = document.createElement('td');
     storesTotalCell.textContent = allStores[i].totalSales;
     storeRow.appendChild(storesTotalCell);
-    resultsTable.appendChild(storeRow)
+    resultsTable.appendChild(storeRow);
   }
 };
 new Store('Seattle', 23, 65, 6.3);
@@ -63,14 +63,3 @@ new Store('Dubai', 11, 38, 3.7);
 new Store('Paris', 20, 38, 3.7);
 new Store('Lima', 2, 16, 4.6);
 renderSales();
-
-// renderHourlySales: function(){
-  //   for(let i=0; i<hours.length; i++){
-      
-  //   }
-  // }
-  // cookiesPerHr: function(){
-  //   for(let i=0; i<hours.length; i++){
-  //     let hourSale = this.custPerHr() * this.avgCookieSale;
-  //     this.storeHourlyTotals.push(hourSale);
-  //   }
