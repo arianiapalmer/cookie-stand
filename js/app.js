@@ -26,20 +26,19 @@ Store.prototype.cookiesPerHour = function () {
 };
 function renderSales(){
   let resultsTable = document.getElementById('results');
-  let hoursHead = document.createElement('tr');
-  let hoursTH = document.createElement('th');
-  hoursTH.textContent = 'Hours'
-  hoursHead.appendChild(hoursTH);
+  let hourHeadingRow = document.createElement('tr');
+  let hoursString = document.createElement('th');
+  hoursString.textContent = 'Hours';
+  hourHeadingRow.appendChild(hoursString);
   for(let i = 0; i < hours.length; i++){
-    let hourData = document.createElement('th');
-    hourData.textContent = hours[i];
-    hoursHead.appendChild(hourData);
-    // tableRow.appendChild(hoursHead);
+    let hourStringHeading = document.createElement('th');
+    hourStringHeading.textContent = hours[i];
+    hourHeadingRow.appendChild(hourStringHeading);
   }
-  let totalsTd = document.createElement('th');
-  totalsTd.textContent = "Daily Total";
-  hoursHead.appendChild(totalsTd)
-  resultsTable.appendChild(hoursHead);
+  let dailyTotalHeading = document.createElement('th');
+  dailyTotalHeading.textContent = "Daily Total";
+  hourHeadingRow.appendChild(dailyTotalHeading)
+  resultsTable.appendChild(hourHeadingRow);
   for (let i = 0; i < allStores.length; i++){
     let storeRow = document.createElement('tr');
     let storeNameTd = document.createElement('td');
@@ -62,14 +61,3 @@ new Store('Dubai', 11, 38, 3.7);
 new Store('Paris', 20, 38, 3.7);
 new Store('Lima', 2, 16, 4.6);
 renderSales();
-
-// renderHourlySales: function(){
-  //   for(let i=0; i<hours.length; i++){
-      
-  //   }
-  // }
-  // cookiesPerHr: function(){
-  //   for(let i=0; i<hours.length; i++){
-  //     let hourSale = this.custPerHr() * this.avgCookieSale;
-  //     this.storeHourlyTotals.push(hourSale);
-  //   }
