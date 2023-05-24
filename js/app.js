@@ -55,7 +55,7 @@ Store.prototype.render = function(){
   // let dailyTotalValue =  sumArray(this.cookiesSoldPerHr);
   // tdStoreDailyTotals.textContent = dailyTotalValue;
 };
-
+// should there be an if else conditional for rendering stores that already exist?
 function headerRow(){
   let hourHeadingRow = document.createElement('tr');
   resultsTable.appendChild(hourHeadingRow);
