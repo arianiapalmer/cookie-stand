@@ -100,3 +100,9 @@ main table tr th {
 main table tr:last-of-type {
     border-bottom: 2px solid rgb(255,182,193, 1.5);
 }
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
