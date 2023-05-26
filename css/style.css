@@ -25,9 +25,6 @@ header{
     border-bottom: solid 5px white;
 
 }
-/* body header div{
-    display: inline-flex;
-} */
 #header{
     display: flex;
     flex-direction: row;
@@ -35,7 +32,6 @@ header{
     align-items: center;
 }
 header div{
-    /* margin: ; */
     max-width: 500px;
     margin: auto;
 }
@@ -99,7 +95,6 @@ table#results {
 }
 main table tr th, main table tr td {
     padding: 10px 15px;
-    
 }
 main table tr th {
     background-color: rgb(255,182,193, 1.5);
@@ -113,8 +108,11 @@ main table tr:last-of-type {
 main table td{
     border-right: 1px solid white;
     border-bottom: 1px solid white;
-
 }
+/* main table th{
+    border-right: 1px solid white;
+    border-bottom: 1px solid white; 
+} */
 fieldset{
 }
 div.form{
@@ -128,10 +126,9 @@ form{
     flex-direction: column;
     /* justify-content: space-between; */
     padding: 15px;
-    max-width: 600px;
+    /* max-width: 600px; */
     border: 2px solid white;
     border-radius: 20px;
-
 }
 legend{
     background-color: rgb(255,182,193, 1.5);
