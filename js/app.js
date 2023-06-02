@@ -1,6 +1,5 @@
 'use strict';
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-// let allStorePerHourTotal = [];
 let allStores = [];
 let storeForm = document.querySelector('form');
 let storeDiv = document.getElementById('store');
@@ -13,7 +12,7 @@ function randomCustPerHr(min, max) {
 function sumArray (arr){
   let total = 0;
   for(let i=0; i<arr.length; i++){
-    total += arr[i].arr[i+i];
+    total += arr[i];
   }
   return total;
 }
@@ -25,7 +24,6 @@ function Store(name, minCust, maxCust, avgCookieSale) {
   this.cookiesSoldPerHr = [];
   this.totalSales = 0;
   this.custPerHr = 0;
-  // this.cookiesPerHour();
   allStores.push(this);
 }
 Store.prototype.getCustPerHr = function () {
@@ -50,12 +48,11 @@ Store.prototype.render = function(){
     tdCookiesPerHr.textContent = `${this.cookiesSoldPerHr[i]}`;
     row2.appendChild(tdCookiesPerHr);
   }
-  // let tdStoreDailyTotals = document.createElement('td');
-  // row2.appendChild(tdStoreDailyTotals);
-  // let dailyTotalValue =  sumArray(this.cookiesSoldPerHr);
-  // tdStoreDailyTotals.textContent = dailyTotalValue;
+  let tdStoreDailyTotals = document.createElement('td');
+  row2.appendChild(tdStoreDailyTotals);
+  let dailyTotalValue =  sumArray(this.cookiesSoldPerHr);
+  tdStoreDailyTotals.textContent = dailyTotalValue;
 };
-// should there be an if else conditional for rendering stores that already exist?
 function headerRow(){
   let hourHeadingRow = document.createElement('tr');
   resultsTable.appendChild(hourHeadingRow);
@@ -103,13 +100,16 @@ function renderStore(){
   }
 }
 function handleFormSubmit(event){
+  resultsTable.innerHTML = '';
   event.preventDefault();
   let name = event.target.storeName.value;
   let minCust = event.target.minCust.value;
   let maxCust = event.target.maxCust.value;
   let avgCookieSale = event.target.avgCookieSale.value;
   new Store(name, minCust, maxCust, avgCookieSale);
+  headerRow();
   renderStore();
+  footerRow();
 }
 storeForm.addEventListener('submit', handleFormSubmit);
 new Store('Seattle', 23, 65, 6.3);
@@ -117,8 +117,6 @@ new Store('Tokyo', 3, 24, 1.2);
 new Store('Dubai', 11, 38, 3.7);
 new Store('Paris', 20, 38, 3.7);
 new Store('Lima', 2, 16, 4.6);
-
-
 headerRow();
 renderStore();
 footerRow();

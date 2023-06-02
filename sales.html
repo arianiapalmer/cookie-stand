@@ -35,14 +35,14 @@
             <fieldset>
               <form action="js/app.js">
                 <legend>Populate Perspective Cookie Shop Sales</legend>
-                <label for="">Enter Prospective Location</label>
-                <input type="text" name="storeName" placeholder="Enter Prospective Location"/>
-                <label for="">Minimum Prospective Customers</label>
-                <input type="text" name="minCust" placeholder="Enter Minimum Prospective Customers"/>
-                <label for="">Maximum Prospective Customers</label>
-                <input type="text" name="maxCust" placeholder="Enter Maximum Prospective Customers"/>
-                <label for="">Prospective Average Cookies Sold Per Customer</label>
-                <input type="text" name="avgCookieSale" placeholder="Enter Prospective Average Cookies Sold Per Customer"/>
+                <!-- <label for="">Enter Prospective Location</label> -->
+                <input type="text" name="storeName" placeholder="Enter Prospective Location" required/>
+                <!-- <label for="">Minimum Prospective Customers</label> -->
+                <input type="number" name="minCust" placeholder="Enter Minimum Prospective Customers" required/>
+                <!-- <label for="">Maximum Prospective Customers</label> -->
+                <input type="number" name="maxCust" placeholder="Enter Maximum Prospective Customers" required/>
+                <!-- <label for="">Prospective Average Cookies Sold Per Customer</label> -->
+                <input type="number" name="avgCookieSale" placeholder="Enter Prospective Average Cookies Sold Per Customer" required/>
                 <!-- <button id="populateStore">Populate Sales</button> -->
                 <input type="submit" value="Populate Sales" name="newStore" id="populateStore"/>
               </form>
