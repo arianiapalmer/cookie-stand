@@ -1,0 +1,19 @@
+body{
+    padding: 10px;
+    margin: 10px;
+}
+h3{
+    margin-top: 10px;
+    margin-bottom: 2px;
+    padding: 5px;
+    max-width: 150px;
+    background-color: pink;
+}
+ul{
+    padding: 5px;
+    border: 1px solid;
+    max-width: 150px;
+}
+li{
+    padding: 2px;
+}
