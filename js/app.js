@@ -55,7 +55,6 @@ let tokyo = {
   avgCookieSale: 1.2,
   cookiesSoldPerHr: [],
 };
-
 let dubai = {
   name: 'Dubai',
   minCust: 11,
@@ -63,7 +62,6 @@ let dubai = {
   avgCookieSale: 3.7,
   cookiesSoldPerHr: [],
 };
-
 let paris = {
   name: 'Paris',
   minCust: 20,
@@ -71,7 +69,6 @@ let paris = {
   avgCookieSale: 2.3,
   cookiesSoldPerHr: [],
 };
-
 let london = {
   name: 'London',
   minCust: 2,
@@ -79,7 +76,5 @@ let london = {
   avgCookieSale: 4.6,
   cookiesSoldPerHr: [],
 };
-
 allStores.push(seattle, tokyo, dubai, paris, london);
-console.log(allStores);
 renderStores(allStores);
